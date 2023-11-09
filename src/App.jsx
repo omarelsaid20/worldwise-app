@@ -12,7 +12,7 @@ import CountriesList from "./components/CountriesList.jsx";
 import ProtectedRoutes from "./pages/ProtectedRoutes.jsx";
 
 const Pricing = lazy(() => import("./pages/Pricing.jsx"));
-const HomePage = lazy(() => import("./pages/HomePage.jsx"));
+const HomePage = lazy(() => import("./pages/Homepage.js"));
 const Product = lazy(() => import("./pages/Product.jsx"));
 const Login = lazy(() => import("./pages/Login.jsx"));
 const AppLayout = lazy(() => import("./pages/AppLayout.jsx"));
