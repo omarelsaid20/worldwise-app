@@ -8,7 +8,7 @@ import {
 
 const CitiesContext = createContext();
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = "https://projects-api-7aa5.onrender.com";
 
 function CitiesProvider({ children }) {
   const [cities, setCities] = useState([]);
@@ -21,7 +21,7 @@ function CitiesProvider({ children }) {
         setIsLoading(true);
         const response = await fetch(`${BASE_URL}/cities`);
         const data = await response.json();
-        setCities(data);
+        setCities(data.cities);
       } catch {
         alert("Some thing went Wrong");
       } finally {
@@ -59,7 +59,7 @@ function CitiesProvider({ children }) {
       });
       const data = await response.json();
 
-      setCities([...cities, data]);
+      setCities([...cities, data.city]);
       console.log(data);
     } catch {
       alert("Some thing went Wrong");
